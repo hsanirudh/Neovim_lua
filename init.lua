@@ -1,0 +1,10 @@
+-- require(Source everything)
+require 'src.basic'
+require 'src.keymaps'
+require 'src.plugins'
+require 'src.colorscheme'
+require 'src.cmp'
+require 'src.lsp'
+require 'src.treesitter'
+require 'src.autopairs'
+require 'src.comment'
