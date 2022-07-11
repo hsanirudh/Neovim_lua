@@ -25,6 +25,7 @@
 | [Comment.nvim](https://github.com/numToStr/Comment.nvim) 
 | [ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring) 
 | [nvim-autopairs](https://github.com/windwp/nvim-autopairs) 
+| [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim) 
 | [indent-blackline.nivm](https://github.com/lukas-reineke/indent-blankline.nvim) 
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim) 
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) 
