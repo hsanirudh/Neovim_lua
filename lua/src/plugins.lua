@@ -41,6 +41,7 @@ return packer.startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use 'jose-elias-alvarez/null-ls.nvim'
   -- Treesitter 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   -- Telescope
@@ -62,7 +63,8 @@ return packer.startup(function(use)
   -- autopairs
   use {
     "windwp/nvim-autopairs",
-      config = function() require("nvim-autopairs").setup {} end
+      config = function() require("nvim-autopairs").setup{} 
+      end
   } 
   -- indent_blackline
   use("lukas-reineke/indent-blankline.nvim")

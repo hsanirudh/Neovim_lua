@@ -4,10 +4,13 @@ if not status_ok then
 	return
 end
 
--- source language servers
-require("src.lsp.langserver")
+-- local for lang server
+local nvim_lsp = require('lspconfig')
 
--- "Default configs that you find in the Documnetation"
+-- source null-ls\
+require("src.lsp.null-ls")
+
+-- "Default configs that you find in the Documnetation
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -22,7 +25,6 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
   -- Mappings.
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
@@ -42,14 +44,12 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
-local lsp_flags = {
-  debounce_text_changes = 150,
-}
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
-require('lspconfig')['tsserver'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
-}
+-- language servers
+local langservers = {'tsserver', 'pyright', 'cssls', 'jsonls', 'dockerls', 'yamlls'} 
+for _, lsp in ipairs(langservers) do
+         nvim_lsp[lsp].setup{
+         on_attach = on_attach, 
+         capabilities = capabilities, 
+         flags = lsp_flags
+     }
+end
