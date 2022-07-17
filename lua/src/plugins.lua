@@ -75,6 +75,7 @@ return packer.startup(function(use)
     require("toggleterm").setup()
   end
   }
+  use 'glepnir/lspsaga.nvim'
   -- Sync_Packer
   if PACKER_BOOTSTRAP then
     require("packer").sync()
