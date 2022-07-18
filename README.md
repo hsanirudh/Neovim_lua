@@ -31,6 +31,7 @@
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) 
 | [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 | [lspsaga](https://github.com/glepnir/lspsaga.nvim)
+| [telescope-file-browser](https://github.com/nvim-telescope/telescope-file-browser.nvim)
 
 
 ## Screenshots

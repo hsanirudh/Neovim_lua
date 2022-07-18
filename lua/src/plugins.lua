@@ -86,6 +86,8 @@ return packer.startup(function(use)
 		end,
 	})
 	use("glepnir/lspsaga.nvim")
+	-- telescope-file-browser.nvim
+	use("nvim-telescope/telescope-file-browser.nvim")
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
