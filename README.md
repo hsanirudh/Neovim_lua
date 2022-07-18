@@ -30,6 +30,7 @@
 | [diffview.nvim](https://github.com/sindrets/diffview.nvim) 
 | [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) 
 | [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+| [lspsaga](https://github.com/glepnir/lspsaga.nvim)
 
 
 ## Screenshots
