@@ -49,8 +49,8 @@ return packer.startup(function(use)
   -- nvim-tree
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
-  -- alpha.nivm
-  use 'mhinz/vim-startify' 
+  -- dashboard.nivm
+  use 'glepnir/dashboard-nvim'
   -- bufferline
   use {'akinsho/bufferline.nvim', tag = "v2.*"}
   -- Lualine.nvim

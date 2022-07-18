@@ -18,7 +18,7 @@
 | [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
 | [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua) 
 | [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) 
-| [vim-startify](https://github.com/mhinz/vim-startify) 
+| [dashboard-nvim](https://github.com/glepnir/dashboard-nvim) 
 | [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) 
 | [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) 
 | [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) 
