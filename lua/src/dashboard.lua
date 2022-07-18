@@ -1,12 +1,12 @@
 local db = require("dashboard")
 
 db.custom_center = {
-  {
-    icon = "  ",
-    desc = "New File                                ",
-    action =  "DashboardNewFile",
-    shortcut = "SPACE n"
-  },
+	{
+		icon = "  ",
+		desc = "New File                                ",
+		action = "DashboardNewFile",
+		shortcut = "SPACE n",
+	},
 	{
 		icon = "  ",
 		desc = "Find  File                              ",
