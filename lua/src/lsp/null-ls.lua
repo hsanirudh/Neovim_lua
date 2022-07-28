@@ -11,7 +11,7 @@ null_ls.setup({
 		formatting.black,
 		formatting.tidy,
 		formatting.stylua,
-    formatting.xmllint,
+		formatting.xmllint,
 		formatting.shfmt,
 		formatting.sql_formatter,
 	},
