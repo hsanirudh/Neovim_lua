@@ -46,3 +46,4 @@ require("toggleterm").setup{
   open_mapping = [[<C-\>]],
 }
 require('gitsigns').setup{}
+require('colorizer').setup{}
