@@ -4,11 +4,9 @@ if not status_ok then
 	return
 end
 
--- local for lang server
-local nvim_lsp = require('lspconfig')
-
 -- source null-ls\
 require("src.lsp.null-ls")
+require("src.lsp.lang_server")
 
 -- "Default configs that you find in the Documnetation
 
@@ -42,14 +40,4 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
-end
-
--- language servers
-local langservers = {'tsserver', 'pyright', 'cssls', 'jsonls', 'dockerls', 'yamlls'} 
-for _, lsp in ipairs(langservers) do
-         nvim_lsp[lsp].setup{
-         on_attach = on_attach, 
-         capabilities = capabilities, 
-         flags = lsp_flags
-     }
 end
