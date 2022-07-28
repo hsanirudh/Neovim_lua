@@ -8,6 +8,11 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
-     formatting.black, formatting.tidy, formatting.stylua, formatting.shfmt, formatting.sql_formatter
-		 },
+		formatting.black,
+		formatting.tidy,
+		formatting.stylua,
+    formatting.xmllint,
+		formatting.shfmt,
+		formatting.sql_formatter,
+	},
 })
