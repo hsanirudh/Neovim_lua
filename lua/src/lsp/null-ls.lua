@@ -1,18 +1,18 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-	return
+  return
 end
 
 local formatting = null_ls.builtins.formatting
 
 null_ls.setup({
-	debug = false,
-	sources = {
-		formatting.black,
-		formatting.tidy,
-		formatting.stylua,
-		formatting.xmllint,
-		formatting.shfmt,
-		formatting.sql_formatter,
-	},
+  debug = true,
+  sources = {
+    formatting.black,
+    formatting.xmllint,
+    formatting.tidy,
+    formatting.stylua,
+    formatting.shfmt,
+    formatting.sql_formatter,
+  },
 })

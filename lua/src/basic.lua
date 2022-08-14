@@ -1,5 +1,4 @@
--- basic options 
-
+-- basic options
 vim.o.pumheight = 10
 vim.o.fileencoding = 'utf-8'
 vim.o.cmdheight = 2
@@ -30,18 +29,3 @@ vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
-
--- init some plugins
-require('lualine').setup {
-  options = { theme = 'horizon' },
-  ...
-}
-require("bufferline").setup{
-  separator_style = "padded_slant"
-}
-require("nvim-tree").setup()
-require("toggleterm").setup{
-  open_mapping = [[<C-\>]],
-}
-require('gitsigns').setup{}
-require('colorizer').setup{}

@@ -1,35 +1,43 @@
 -- local vars
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
-vim.g.mapleader = ","
+
+-- leader key
+vim.g.mapleader = ' '
+
+-- better window navigation
+keymap('n', '<C-h>', '<C-w>h', opts)
+keymap('n', '<C-l>', '<C-w>l', opts)
+keymap('n', '<C-j>', '<C-w>j', opts)
+keymap('n', '<C-k>', '<C-k>h', opts)
+
+-- Better Indent mode
+keymap('v', '<', '<gv', opts)
+keymap('v', '>', '>gv', opts)
+
+-- better registers (The yanked word remains the same)
+keymap('v', 'p', '"_dP', opts)
+
+-- Move lines up and down in Visual mode
+keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", opts)
+keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", opts)
+
+-- Move lines up and down in Normal mode
+keymap('n', '<A-j>', ":m .+1<CR>==", opts)
+keymap('n', '<A-k>', ":m .-2<CR>==", opts)
+
+-- Buffer-navigation
+keymap('n', '<S-j>', ':bnext<CR>', opts)
+keymap('n', '<S-k>', ':bprevious<CR>', opts)
+
+-- better escape
+keymap('i', 'jk', '<ESC>', opts)
+keymap('i', 'kj', '<ESC>', opts)
+
 -- keymaps for nvim
 keymap("n", "<A-w>", ":q<CR>", opts)
 keymap("n", "<A-S-w>", ":wq<CR>", opts)
 
 -- keymaps for bufferline
-keymap("n", "<A-2>", ":BufferLineCycleNext<CR>", opts)
-keymap("n", "<A-1>", ":BufferLineCyclePrev<CR>", opts)
-keymap("n", "<A-S-2>", ":BufferLineMoveNext<CR>", opts)
-keymap("n", "<A-S-1>", ":BufferLineMovePrev<CR>", opts)
 keymap("n", "<A-S-c>", ":BufferLinePickClose<CR>", opts)
-
--- keymaps for nvim-tree
-keymap("n", "<A-f>", ":NvimTreeFocus<CR>", opts)
-
--- keymaps for Telescope
-keymap("n", "<S-f>", ":Telescope find_files find_command=rg,--hidden,--files<CR>", opts)
-keymap("n", "<S-l>", ":Telescope live_grep<CR>", opts)
-keymap("n", "<S-s>", ":Telescope git_commits<CR>", opts)
-keymap("n", "<S-b>", ":Telescope file_browser<CR>", opts)
-
--- diffview
-keymap("n", "<C-l>", ":DiffviewOpen<CR>", opts)
-
--- keymap for new file
-keymap("n", "<Space>n", ":DashboardNewFile<CR>", opts)
-
--- null-ls
-keymap("n", "<A-t>", ":lua vim.lsp.buf.formatting()<CR>", opts)
-
--- lspsaga
-keymap("n", "<leader>d", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "<A-k>", "BufferLineTogglePin<CR>", opts)

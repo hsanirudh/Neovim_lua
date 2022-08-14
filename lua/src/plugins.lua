@@ -27,14 +27,10 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	-- MarkDown Preview
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
+        use({
+          "iamcco/markdown-preview.nvim",
+          run = function() vim.fn["mkdp#util#install"]() end,
+        })
 	-- colorscheme
 	use("folke/tokyonight.nvim")
 	-- nvim-cmp and plugins
@@ -44,6 +40,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip")
 	use("L3MON4D3/LuaSnip")
+        use("hrsh7th/cmp-buffer")
+        use("hrsh7th/cmp-path")
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
@@ -73,8 +71,6 @@ return packer.startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	-- indent_blackline
-	use("lukas-reineke/indent-blankline.nvim")
 	-- diffview
 	use("sindrets/diffview.nvim")
 	-- terminal
@@ -87,9 +83,21 @@ return packer.startup(function(use)
 	})
 	use("glepnir/lspsaga.nvim")
 	-- telescope-file-browser.nvim
-	use("nvim-telescope/telescope-file-browser.nvim")
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	-- colorizer
-	use("norcalli/nvim-colorizer.lua")
+	use({ "norcalli/nvim-colorizer.lua" })
+       -- telescope-emoji
+        use ({ "xiyaowong/telescope-emoji.nvim" })
+        -- telescope-packer
+        use({ "nvim-telescope/telescope-packer.nvim" })
+        -- which-key
+        use ({ "folke/which-key.nvim" })
+        -- wilder-nvim
+        use({ "gelguy/wilder.nvim" })
+        -- indent-blackline
+        use({ "lukas-reineke/indent-blankline.nvim" })
+        -- nvim-cursorline
+        use ({ "yamatsum/nvim-cursorline" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

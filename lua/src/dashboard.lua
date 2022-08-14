@@ -5,25 +5,25 @@ db.custom_center = {
 		icon = "  ",
 		desc = "New File                                ",
 		action = "DashboardNewFile",
-		shortcut = "SPACE n",
+		shortcut = "SPC n",
 	},
 	{
 		icon = "  ",
 		desc = "Find  File                              ",
 		action = "Telescope find_files find_command=rg,--hidden,--files",
-		shortcut = "SHIFT f",
+		shortcut = "SPC tf",
 	},
 	{
 		icon = "  ",
 		desc = "File Browser                            ",
 		action = "Telescope file_browser",
-		shortcut = "SHIFT b",
+		shortcut = "SPC tb",
 	},
 	{
 		icon = "  ",
 		desc = "Find  word                              ",
 		action = "Telescope live_grep",
-		shortcut = "SHIFT l",
+		shortcut = "SPC tl",
 	},
 }
 
