@@ -50,7 +50,7 @@ local mappings = {
     v = {":Lspsaga hover_doc<CR>", "LSPSaga Hover"},
     l = {":LspInfo<cr>", "Connected Language Servers"},
     i = {":LspInstallerInfo<CR>", "Lsp Language Servers Installer"},
-    n = {":nullLsInfo<CR>", "Null-ls Info"},
+    n = {":NullLsInfo<CR>", "Null-ls Info"},
     f = {":lua vim.lsp.buf.formatting()<CR>", "Null-ls Formatting"},
   },
   -- Markdown
