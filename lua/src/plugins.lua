@@ -98,6 +98,8 @@ return packer.startup(function(use)
         use({ "lukas-reineke/indent-blankline.nvim" })
         -- nvim-cursorline
         use ({ "yamatsum/nvim-cursorline" })
+        -- better-escape.nvim
+        use ({ "max397574/better-escape.nvim" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
