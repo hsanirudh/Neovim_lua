@@ -13,4 +13,3 @@ require("Comment").setup({
     })
   end,
 })
-
