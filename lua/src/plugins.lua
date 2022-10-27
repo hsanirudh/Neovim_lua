@@ -76,9 +76,11 @@ return packer.startup(function(use)
 	-- terminal
 	use({
 		"akinsho/toggleterm.nvim",
-		tag = "v1.*",
+		tag = "*",
 		config = function()
-			require("toggleterm").setup()
+			require("toggleterm").setup{
+                         open_mapping = [[<c-\>]],
+                        }
 		end,
 	})
 	use("glepnir/lspsaga.nvim")
