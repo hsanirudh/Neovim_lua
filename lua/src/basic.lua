@@ -17,7 +17,6 @@ vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.scrolloff = 3
 vim.o.sidescrolloff = 5
-vim.o.mouse = "a"
 vim.wo.wrap = false
 vim.wo.number = true
 vim.o.cursorline = true
@@ -29,3 +28,14 @@ vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
+
+-- For WSL clipboard fix
+
+if vim.fn.has('wsl') == 1 then
+      vim.api.nvim_create_autocmd('TextYankPost', {
+	group = vim.api.nvim_create_augroup('Yank', { clear = true }),
+      	callback = function()
+        vim.fn.system('clip.exe', vim.fn.getreg('"'))
+	end,
+	})
+end

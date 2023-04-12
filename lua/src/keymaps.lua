@@ -29,6 +29,7 @@ keymap('n', '<A-k>', ":m .-2<CR>==", opts)
 -- Buffer-navigation
 keymap('n', '<S-j>', ':bnext<CR>', opts)
 keymap('n', '<S-k>', ':bprevious<CR>', opts)
+keymap("n", "<S-e>", ":bdelete<CR>", opts)
 
 -- better escape
 keymap('i', 'jk', '<ESC>', opts)
@@ -39,5 +40,4 @@ keymap("n", "<A-w>", ":q<CR>", opts)
 keymap("n", "<A-S-w>", ":wq<CR>", opts)
 
 -- keymaps for bufferline
-keymap("n", "<A-S-c>", ":BufferLinePickClose<CR>", opts)
 keymap("n", "<A-k>", "BufferLineTogglePin<CR>", opts)

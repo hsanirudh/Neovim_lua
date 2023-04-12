@@ -27,10 +27,12 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	-- MarkDown Preview
-        use({
-          "iamcco/markdown-preview.nvim",
-          run = function() vim.fn["mkdp#util#install"]() end,
-        })
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 	-- colorscheme
 	use("folke/tokyonight.nvim")
 	-- nvim-cmp and plugins
@@ -40,12 +42,15 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lua")
 	use("saadparwaiz1/cmp_luasnip")
 	use("L3MON4D3/LuaSnip")
-        use("hrsh7th/cmp-buffer")
-        use("hrsh7th/cmp-path")
-	-- LSP
-	use("neovim/nvim-lspconfig")
-	use("williamboman/nvim-lsp-installer")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	-- LSP and mason
 	use("jose-elias-alvarez/null-ls.nvim")
+	use({
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
+	})
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	-- Telescope
@@ -54,9 +59,11 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
 	-- dashboard.nivm
-	use("glepnir/dashboard-nvim")
-	-- bufferline
-	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
+	use({
+		"glepnir/dashboard-nvim",
+	})
+	-- bufferline.lua
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	-- Lualine.nvim
 	use("nvim-lualine/lualine.nvim")
 	-- gitsigns
@@ -73,35 +80,28 @@ return packer.startup(function(use)
 	})
 	-- diffview
 	use("sindrets/diffview.nvim")
-	-- terminal
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "*",
-		config = function()
-			require("toggleterm").setup{
-                         open_mapping = [[<c-\>]],
-                        }
-		end,
-	})
+	-- lspsaga
 	use("glepnir/lspsaga.nvim")
 	-- telescope-file-browser.nvim
 	use({ "nvim-telescope/telescope-file-browser.nvim" })
 	-- colorizer
 	use({ "norcalli/nvim-colorizer.lua" })
-       -- telescope-emoji
-        use ({ "xiyaowong/telescope-emoji.nvim" })
-        -- telescope-packer
-        use({ "nvim-telescope/telescope-packer.nvim" })
-        -- which-key
-        use ({ "folke/which-key.nvim" })
-        -- wilder-nvim
-        use({ "gelguy/wilder.nvim" })
-        -- indent-blackline
-        use({ "lukas-reineke/indent-blankline.nvim" })
-        -- nvim-cursorline
-        use ({ "yamatsum/nvim-cursorline" })
-        -- better-escape.nvim
-        use ({ "max397574/better-escape.nvim" })
+	-- telescope-emoji
+	use({ "xiyaowong/telescope-emoji.nvim" })
+	-- telescope-packer
+	use({ "nvim-telescope/telescope-packer.nvim" })
+	-- which-key
+	use({ "folke/which-key.nvim" })
+	-- wilder-nvim
+	use({ "gelguy/wilder.nvim" })
+	-- indent-blackline
+	use({ "lukas-reineke/indent-blankline.nvim" })
+	-- nvim-cursorline
+	use({ "yamatsum/nvim-cursorline" })
+	-- better-escape.nvim
+	use({ "max397574/better-escape.nvim" })
+	-- rainbow brackets
+	use({ "HiPhish/nvim-ts-rainbow2" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

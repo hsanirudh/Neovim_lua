@@ -36,22 +36,25 @@ local mappings = {
    b = { ":Telescope file_browser<CR>", "File Browser"},
   },
   -- Nvimtree
-  f = { ":NvimTreeOpen<CR>", "Open NvimTree"},
+  f = {
+    ":NvimTreeOpen<CR>", "Open NvimTree"
+  },
   -- New file
-  n = { ":DashboardNewFile<CR>", "Open New file"},
+  n = { ":e ", "Open New file"},
   -- Diff-view
   d = {":DiffviewOpen<CR>", "Git Diff View"},
   -- lsp
   r = {
-    name = "lsp",
+    name = "LSP",
     h = {":lua vim.lsp.buf.hover()<CR>", "Hover_doc"},
     d = {":lua vim.lsp.buf.definition()<CR>", "LSP Definition"},
     q = {":lua vim.lsp.buf.declaration()<CR>", "LSP Declaration"},
-    v = {":Lspsaga hover_doc<CR>", "LSPSaga Hover"},
     l = {":LspInfo<cr>", "Connected Language Servers"},
-    i = {":LspInstallInfo<CR>", "Lsp Language Servers Installer"},
+    i = {":Mason<CR>", "Mason"},
     n = {":NullLsInfo<CR>", "Null-ls Info"},
-    f = {":lua vim.lsp.buf.formatting()<CR>", "Null-ls Formatting"},
+    f = {":lua vim.lsp.buf.format()<CR>", "Null-ls Formatting"},
+    a = {"Code Actions"},
+    m = {"Type Defenation"},
   },
   -- Markdown
   m = {
@@ -59,6 +62,10 @@ local mappings = {
     t = {":MarkdownPreviewToggle<CR>", "Markdown Toggle"},
     s = {":MarkdownPreviewStop<CR>", "Markdown Stop"}
   },
+  -- diagnostic list
+  j = {"Diagnostic list"},
+  s = {name = "LSPSaga"},
+  o = {"Open Diagnostics"}
 }
 
 -- opts
