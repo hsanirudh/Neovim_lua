@@ -39,3 +39,13 @@ if vim.fn.has('wsl') == 1 then
 	end,
 	})
 end
+
+-- autocmd for Highlight Yanked text 
+vim.api.nvim_create_autocmd('TextYankPost', {
+	desc = 'Hightlight selection on yank',
+	pattern = '*',
+	callback = function()
+	  vim.highlight.on_yank { higroup = 'IncSearch', timeout = 500, on_visual=false}
+	end,
+  })
+  
