@@ -102,6 +102,8 @@ return packer.startup(function(use)
 	use({ "max397574/better-escape.nvim" })
 	-- rainbow brackets
 	use({ "HiPhish/nvim-ts-rainbow2" })
+        -- Vim-eunuch
+        use({ "tpope/vim-eunuch" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
