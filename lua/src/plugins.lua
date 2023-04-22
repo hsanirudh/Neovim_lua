@@ -104,6 +104,8 @@ return packer.startup(function(use)
 	use({ "HiPhish/nvim-ts-rainbow2" })
         -- Vim-eunuch
         use({ "tpope/vim-eunuch" })
+        -- vim-fugative
+        use({ "tpope/vim-fugitive" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
