@@ -106,6 +106,9 @@ return packer.startup(function(use)
         use({ "tpope/vim-eunuch" })
         -- vim-fugative
         use({ "tpope/vim-fugitive" })
+        -- vim-smoothie
+        use({ "psliwka/vim-smoothie" })
+	-- Sync_Packer
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
