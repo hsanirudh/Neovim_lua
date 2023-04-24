@@ -108,7 +108,8 @@ return packer.startup(function(use)
         use({ "tpope/vim-fugitive" })
         -- vim-smoothie
         use({ "psliwka/vim-smoothie" })
-	-- Sync_Packer
+        -- code-minimap
+        use({ "wfxr/minimap.vim" })
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
