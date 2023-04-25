@@ -65,7 +65,15 @@ local mappings = {
   -- diagnostic list
   j = {"Diagnostic list"},
   s = {name = "LSPSaga"},
-  o = {"Open Diagnostics"}
+  o = {"Open Diagnostics"},
+  b = {
+    name = "Packer commands",
+    n = {":PackerInstall<CR>", "Packer Install"},
+    s = {":PackerSync<CR>", "Packer Sync"},
+    c = {":PackerCompile<CR>", "Packer Compile"},
+    e = {":PackerStatus<CR>", "Packer Status"},
+    r = {":PackerClean<CR>", "Packer Clean"},
+  }
 }
 
 -- opts
