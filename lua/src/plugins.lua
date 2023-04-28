@@ -110,6 +110,8 @@ return packer.startup(function(use)
         use({ "psliwka/vim-smoothie" })
         -- code-minimap
         use({ "wfxr/minimap.vim" })
+        -- error-lens
+        use {("chikko80/error-lens.nvim")}
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
