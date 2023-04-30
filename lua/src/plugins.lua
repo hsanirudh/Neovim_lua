@@ -112,6 +112,8 @@ return packer.startup(function(use)
         use({ "wfxr/minimap.vim" })
         -- error-lens
         use {("chikko80/error-lens.nvim")}
+        -- structlog.nvim
+        use {("Tastyep/structlog.nvim")}
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
