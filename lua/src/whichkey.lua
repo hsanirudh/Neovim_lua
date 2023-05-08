@@ -73,7 +73,8 @@ local mappings = {
     c = {":PackerCompile<CR>", "Packer Compile"},
     e = {":PackerStatus<CR>", "Packer Status"},
     r = {":PackerClean<CR>", "Packer Clean"},
-  }
+  },
+  h = {"ggVG", "Select all"},
 }
 
 -- opts
