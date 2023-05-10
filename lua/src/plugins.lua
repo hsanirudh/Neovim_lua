@@ -114,6 +114,8 @@ return packer.startup(function(use)
         use {("chikko80/error-lens.nvim")}
         -- structlog.nvim
         use {("Tastyep/structlog.nvim")}
+        -- carbon.sh
+        use {( "ellisonleao/carbon-now.nvim" )}
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

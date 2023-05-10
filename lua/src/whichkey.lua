@@ -58,9 +58,10 @@ local mappings = {
   },
   -- Markdown
   m = {
-    name = "Markdown Preview",
+    name = "Markdown Preview and carbon.sh",
     t = {":MarkdownPreviewToggle<CR>", "Markdown Toggle"},
-    s = {":MarkdownPreviewStop<CR>", "Markdown Stop"}
+    s = {":MarkdownPreviewStop<CR>", "Markdown Stop"},
+    c = {":CarbonNow<CR>", "Carbon.sh code"}
   },
   -- diagnostic list
   j = {"Diagnostic list"},
