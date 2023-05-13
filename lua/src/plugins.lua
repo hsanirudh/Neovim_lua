@@ -116,6 +116,8 @@ return packer.startup(function(use)
         use {("Tastyep/structlog.nvim")}
         -- carbon.sh
         use {( "ellisonleao/carbon-now.nvim" )}
+        -- numb
+        use {( "nacro90/numb.nvim" )}
 	-- Sync_Packer
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
