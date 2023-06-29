@@ -12,7 +12,7 @@ require("mason").setup({
       package_uninstalled = "✗",
     },
   },
-  ensure_installed = {"clagnd", "bashls", "cssls", "dockerls", "java_language_server", "tsserver", "lua_ls", }. 
+  ensure_installed = {"clagnd", "bashls", "cssls", "dockerls", "java_language_server", "tsserver", "lua_ls", } 
 })
 
 local mlsp = require("mason-lspconfig")
