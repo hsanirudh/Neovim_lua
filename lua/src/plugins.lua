@@ -44,6 +44,7 @@ return packer.startup(function(use)
 	use("L3MON4D3/LuaSnip")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+	use("rafamadriz/friendly-snippets")
 	-- LSP and mason
 	use("jose-elias-alvarez/null-ls.nvim")
 	use({
@@ -78,6 +79,8 @@ return packer.startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
+	-- ns-auto-tag
+	use("windwp/nvim-ts-autotag")
 	-- diffview
 	use("sindrets/diffview.nvim")
 	-- lspsaga
