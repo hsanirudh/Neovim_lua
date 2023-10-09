@@ -43,7 +43,7 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 	}),
 	-- Treesitter
-	({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }),
+	({ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }),
 	-- Telescope
 	("nvim-telescope/telescope.nvim"),
 	-- nvim-tree
