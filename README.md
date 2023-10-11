@@ -1,7 +1,7 @@
 # Neovim Config
 #### This is my configuration of ***Neovim in Lua***
 
-##### **Used Plugin Manager** : [packer.nvim](https://github.com/wbthomason/packer.nvim)
+##### **Used Plugin Manager** : [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## Screenshots
 

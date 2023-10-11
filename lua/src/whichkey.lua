@@ -68,12 +68,8 @@ local mappings = {
   s = {name = "LSPSaga"},
   o = {"Open Diagnostics"},
   b = {
-    name = "Packer commands",
-    n = {":PackerInstall<CR>", "Packer Install"},
-    s = {":PackerSync<CR>", "Packer Sync"},
-    c = {":PackerCompile<CR>", "Packer Compile"},
-    e = {":PackerStatus<CR>", "Packer Status"},
-    r = {":PackerClean<CR>", "Packer Clean"},
+    name = "lazy commands ",
+    h = {":Lazy help<CR>", "Lazy help"},
   },
   h = {"ggVG", "Select all"},
 }
