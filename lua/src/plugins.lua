@@ -109,4 +109,6 @@ require("lazy").setup({
         {( "ellisonleao/carbon-now.nvim" )},
         -- numb
         {( "nacro90/numb.nvim" )},
+        -- project.nvim
+        {( "ahmedkhalf/project.nvim" )},
       })

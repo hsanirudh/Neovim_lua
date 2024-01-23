@@ -34,6 +34,7 @@ local mappings = {
    l = { ":Telescope live_grep<CR>", "Live grep"},
    g = { ":Telescope git_commits<CR>", "Git Commits"},
    b = { ":Telescope file_browser<CR>", "File Browser"},
+   p = { ":Telescope projects<CR>", "Projects finder"},
   },
   -- Nvimtree
   f = {
