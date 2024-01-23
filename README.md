@@ -24,3 +24,14 @@
    <br>
 </p>
 
+<p align="center">
+   <a><img src="https://raw.githubusercontent.com/hsanirudh/Neovim_lua/init.lua/screenshots/Screenshot4.png" alt="4" width=600px></a>
+   <br>
+   <br>
+</p>
+
+<p align="center">
+   <a><img src="https://raw.githubusercontent.com/hsanirudh/Neovim_lua/init.lua/screenshots/Screenshot5.png" alt="5" width=600px></a>
+   <br>
+   <br>
+</p>
