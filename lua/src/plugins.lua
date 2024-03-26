@@ -52,7 +52,7 @@ require("lazy").setup({
 		"glepnir/dashboard-nvim",
 	}),
 	-- bufferline.lua
-	({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" }),
+	({ "akinsho/bufferline.nvim", version = "*", requires = "nvim-tree/nvim-web-devicons" }),
 	-- Lualine.nvim
 	("nvim-lualine/lualine.nvim"),
 	-- gitsigns
