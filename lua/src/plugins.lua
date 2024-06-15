@@ -56,7 +56,7 @@ require("lazy").setup({
 		"glepnir/dashboard-nvim",
 	}),
 	-- bufferline.lua
-	({ "akinsho/bufferline.nvim", version = "*", requires = "nvim-tree/nvim-web-devicons" }),
+	({ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" }),
 	-- Lualine.nvim
 	("nvim-lualine/lualine.nvim"),
 	-- gitsigns
@@ -83,8 +83,6 @@ require("lazy").setup({
 	({ "norcalli/nvim-colorizer.lua" }),
 	-- telescope-emoji
 	({ "xiyaowong/telescope-emoji.nvim" }),
-	-- telescope-packer
-	({ "nvim-telescope/telescope-packer.nvim" }),
 	-- which-key
 	({ "folke/which-key.nvim" }),
 	-- wilder-nvim
