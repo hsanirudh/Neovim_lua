@@ -29,6 +29,7 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+vim.g.blamer_enabled = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Hightlight selection on yank',
