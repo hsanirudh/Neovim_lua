@@ -19,6 +19,7 @@ git clone --quiet https://github.com/hsanirudh/Neovim_lua.git "$temp_dir"
 
 echo -e "${YELLOW}🚚 Moving config files to ~/.config/nvim...${RESET}"
 mv "$temp_dir/init.lua" ~/.config/nvim/
+mv "$temp_dir/stylua.toml" ~/.config/nvim/
 mv "$temp_dir/lua" ~/.config/nvim/
 
 # Clean up the temporary directory
