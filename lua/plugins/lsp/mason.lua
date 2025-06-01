@@ -21,7 +21,6 @@ return {
       mason_lsp.setup({
         ensure_installed = {
             "lua_ls",
-            "tsserver",
             "cssls",
             "tailwindcss",
             "pyright",
