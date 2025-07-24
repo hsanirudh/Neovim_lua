@@ -4,14 +4,15 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         { "antosha417/nvim-lsp-file-operations", opts = true },
+        "williamboman/mason-lspconfig.nvim", 
     },
     config = function ()
         local lspconf = require("lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local lsp_file_ops = require("lsp-file-operations")
-        local mason_lsp = require("mason-lspconfig")
+        
+        local mason_lsp_ok, mason_lsp = pcall(require, "mason-lspconfig")
 
-        -- Define capabilities and on_attach function
         local capabilities = cmp_nvim_lsp.default_capabilities()
         capabilities = vim.tbl_deep_extend(
             "force",
@@ -68,29 +69,29 @@ return {
             keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
         end
 
-        -- Configure diagnostic symbols
         local signs = { Error = "✖ ", Warn = "⚠ ", Hint = "⚑ ", Info = "ℹ " }
         for type, icon in pairs(signs) do
             local hl = "DiagnosticSign" .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
         end
 
-        -- Setup LSP handlers
-        mason_lsp.setup_handlers({
-            function(server_name)
-                lspconf[server_name].setup({
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                })
-            end,
-        })
+        if mason_lsp_ok and mason_lsp.setup_handlers then
+            mason_lsp.setup_handlers({
+                function(server_name)
+                    lspconf[server_name].setup({
+                        capabilities = capabilities,
+                        on_attach = on_attach,
+                    })
+                end,
+            })
+        end
 
-        -- Configure specific LSP servers
         lspconf["emmet_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
         })
+        
         lspconf["lua_ls"].setup({
             capabilities = capabilities,
             on_attach = on_attach,
