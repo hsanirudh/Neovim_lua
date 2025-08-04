@@ -158,6 +158,7 @@ This configuration provides **first-class support** for:
 ### **Systems Programming**
 - **C/C++**: Clang-based completion and debugging
 - **Go**: Native Go tools integration
+- **Java**: Eclipse JDT language server
 
 ### **Scripting & Automation**
 - **Python**: PyRight LSP with Black formatting
@@ -167,7 +168,6 @@ This configuration provides **first-class support** for:
 ### **Data & Documentation**
 - **Markdown**: Live preview and formatting
 - **Docker**: Dockerfile syntax and linting
-- **Java**: Eclipse JDT language server
 
 ### **Additional Languages**
 Easy to add support for any language through Mason's LSP installer.
@@ -231,6 +231,7 @@ Easy to add support for any language through Mason's LSP installer.
 - **[Auto-pairs](https://github.com/windwp/nvim-autopairs)**: Smart bracket/quote pairing
 - **[Surround](https://github.com/kylechui/nvim-surround)**: Quick text object manipulation
 - **[Comment](https://github.com/numToStr/Comment.nvim)**: Smart commenting
+- **[flash.nvim](https://github.com/folke/flash.nvim)**: Smart word lookup 
 
 ### **UI & Themes**
 - **[BufferLine](https://github.com/akinsho/bufferline.nvim)**: Beautiful tab-like buffer line
